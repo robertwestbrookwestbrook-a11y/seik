@@ -1,0 +1,24 @@
+.highlight {
+  color: #95d2e6;
+  text-shadow:
+    rgba(216, 230, 236, 0.9) 0 0 0,
+    rgba(153, 179, 190, 0.75) 0 0 8px,
+    rgba(153, 179, 190, 0.25) 0 0 12px;
+  transition: color 1000ms ease, text-shadow 3000ms cubic-bezier(.2,.8,.2,1);
+  outline: none;
+}
+
+/* When the screen/tab is focused, allow the highlight glow on focus-visible (keyboard) */
+.screen-focused .highlight:focus,
+.screen-focused .highlight.focus-visible {
+  color: rgb(250, 249, 244);
+  text-shadow:
+    rgba(216, 230, 236, 0.9) 0 0 6px,
+    rgba(153, 179, 190, 0.75) 0 0 25px,
+    rgba(153, 179, 190, 0.25) 0 0 32px;
+}
+
+/* Keep hover behavior off if you don't want mouse hover to trigger */
+.highlight:hover {
+  /* no-op or keep same as base if you want no hover change */
+}
